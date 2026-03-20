@@ -1,3 +1,87 @@
 body {
-  background: blue;
+  background: #f7e0a3;
+  padding: 2rem 0;
+  box-sizing: border-box;
+  flex-direction: column;
+  font-family: 'montserrat', sans-serif;
+  font-weight: bold;
+  margin: 0;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+#weather-container {
+  width: 90%;
+  max-width: 375px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#city{
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 1.2rem;
+}
+
+.day-name, .day-temp {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.summary-row,
+.description,
+.temp,
+#sunrise,
+#sunset {
+  margin: 0;
+  padding: 0;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.forecast-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.2)
+}
+
+.summary-row{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: start;
+}
+
+.clear-day {
+background: linear-gradient(180deg, #f7e0a3 0%, #f4d06f 100%);
+color: #2b5a27;
+}
+
+.cloudy-day {
+background: linear-gradient(180deg, #d3d3d3 0%, #a9a9a9 100%);
+color: #ff7d7d;
+}
+
+.rainy-day {
+  background: linear-gradient(180deg,#a3def7 0%, #5da9d0);
+  color: #164a68;
+}
+
+.storm-day {
+  background: linear-gradient(180deg, #4b4b4b 0%, #1a1a1a 100%);
+  color: #ffffff;
+}
+
+.snow-day {
+  background: linear-gradient(180deg, #ffffff 0%, #e0f7fa 100%);
+  color: #455a64;
+}
+
+#weather-icon {
+  margin: 0;
+  width: 10rem;
 }

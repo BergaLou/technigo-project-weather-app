@@ -5,9 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather app</title>
     <!-- Don't forget to link the CSS file here! -->
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Weather app</h1>
+
+  <div id="weather-container"> 
+    <div class="summary-row">
+      <span id="description"></span>
+      <span id="temp"></span>
+      </div>
+  
+  <div class="summary-row">
+      <span id="sunrise"></span>
+  </div>
+  
+  <div class="summary-row">
+      <span id="sunset"></span>
+    </div>
+    <div class="weather-header">
+    <img id="weather-icon" src="" alt="weather-icon">
+    </div>
+    <h1 id="city">Loading city...</h1>
+
+    <p id="forecast"></p>
+  </div>
   <!-- Don't forget to connect the JavaScript file -->
-  </body>
+  <script src="script.js"></script>  
+</body>
 </html>
