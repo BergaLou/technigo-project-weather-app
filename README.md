@@ -20,4 +20,4 @@ The app detects your current location to show you the local weather. If you choo
 
 ## View it live
 
-seeup.netlify.app
+[Click here to see the live app!](https://seeup.netlify.app)

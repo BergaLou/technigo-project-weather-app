@@ -44,26 +44,32 @@ const fetchWeather = async (lat, lon) => {
 
     if (weatherMain === "Clear") {
         icon.src = "./assets/catsunglasses.png";
+        icon.alt = "A cool cat with sunglasses in the sun."
         cityElement.innerHTML = `Get your sunnies on. ${data.name} is looking rather great today.`;
         bodyElement.className = "clear-day";
     } else if (weatherMain === "Clouds") {
         icon.src = "./assets/cloudy.png";
+        icon.alt = "Cloudy";
         cityElement.innerHTML = `Light a fire and get cosy. ${data.name} is looking grey today.`;
         bodyElement.className = "cloudy-day";
     } else if (weatherMain === "Rain" || weatherMain === "Drizzle") {
         icon.src = "./assets/umbrella.png";
+        icon.alt = "A yellow umbrella in rain";
         cityElement.innerHTML = `Don´t forget your umbrella. It's wet in ${data.name} today.`;
         bodyElement.className = "rainy-day";
     } else if (weatherMain === "Thunderstorm") {
         icon.src = "./assets/storm.png";
+        icon.alt = "Thunderstorm";
         cityElement.innerHTML = `Stay inside and order food instead, there's a storm coming to ${data.name} now.`;
         bodyElement.className = "storm-day";
     } else if (weatherMain === "Snow") {
         icon.src = "./assets/snowman.png"
+        icon.alt = "Snowman in a snowing day";
         cityElement.innerHTML = `Dress warmly and go out and make the nicest snowman in the whole ${data.name}.`;
         bodyElement.className = "snow-day";
     } else {
         icon.src = "./assets/suncloudy.png"
+        icon.alt = "sun and clouds";
         cityElement.innerHTML = `Weather in ${data.name} is a bit unusual today!`;
         bodyElement.className = "cloudy-day"
     }
@@ -91,11 +97,9 @@ const fetchWeather = async (lat, lon) => {
                 <span class="day-name">${dayName}</span>
                 <span class="day-temp">${day.main.temp.toFixed(0)}°C</span>
             </div>`;
-    });
+        });
 
-    console.log("The location did it!", data);
-
-      } catch (error) {
+    } catch (error) {
     console.error("Oh something was wrong:", error);
   }
 };
