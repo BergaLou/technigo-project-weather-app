@@ -19,3 +19,5 @@ The app detects your current location to show you the local weather. If you choo
 - OpenWeatherMap API
 
 ## View it live
+
+seeup.netlify.app
